@@ -1,0 +1,385 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-left: 100px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 60px;
+  gap: 5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  color: #0073e6;
+  background-color: darkred;
+}
+
+/* Home Section */
+.home {
+  text-align: center;
+  background-color: #0073e6;
+  color: white;
+  padding: 100px 20px;
+  margin-top: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4f4f4;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Skills Section */
+.skills {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  display: inline-block;
+  margin: 10px;
+  background: #0073e6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  gap: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+  text-align: center;
+  background-color: #0073e6;
+  color: white;
+  padding: 50px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;  /* Centers the icons */
+  gap: 20px;  /* Increased space between icons */
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+/* Contact Form Styling */
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto;  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: darkred;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+/*home page paragraph*/
+#profession {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  background-color: #0073e6;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+/*about me paragraph*/
+#me {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+/* CTA Buttons */
+/* Center the CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 20px; /* Adds space between the buttons */
+  margin-top: 0px;
+}
+
+/* Common Button Styling */
+.cta-buttons .btn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.cta-buttons .btn:hover {
+  background-color: darkred;
+}
+/* Carousel Section */
+/* Carousel Section */
+/* Carousel Section */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: none; /* Removes any background */
+}
+
+/* Ensure the images fully cover the circle */
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make sure images fully fit the circle */
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle */
+  border-radius: 200%; /* Keeps the circular shape */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1; /* Ensures images are on top */
+}
+
+/* Image rotation animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.carousel-img:nth-child(1) {
+  animation: fadeInOut 9s infinite;
+}
+
+.carousel-img:nth-child(2) {
+  animation: fadeInOut 9s infinite;
+  animation-delay: 3s;
+}
+
+.carousel-img:nth-child(3) {
+  animation: fadeInOut 9s infinite;
+  animation-delay: 6s;
+}
+.download-cv-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.download-cv-button:hover {
+  background-color: darkred; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.download-cv-button:active {
+  background-color: crimson; /* Lighter red when clicked */
+  transform: scale(0.98);
+}
