@@ -6,110 +6,166 @@ body {
   background-color: #f5f5f5;
 }
 
+/*header*/
+/* Hero Background (Unified Background for Header & Home) */
+.hero-background {
+  background: url('https://www.eschoolnews.com/files/2024/12/k-12-tech-innovation-news.jpeg') no-repeat center center/cover;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Overlay to Improve Text Visibility */
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+.hero-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+
+/* Ensure Header and Home Content are Above Overlay */
+header, .home {
+  position: relative;
+  z-index: 2;
+}
+
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 15px 50px;
-  position: fixed;
   width: 100%;
+  padding: 20px 50px;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10;
 }
 
+/* Logo */
 .logo img {
   height: 50px;
 }
 
-nav ul {
+/* Navigation */
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 10px;
-  margin-left: 100px;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
 }
 
-nav ul li {
-  display: inline;
-  margin-left: 30px;
+.nav-links li {
+  display: inline-block;
 }
 
-nav ul li a {
-  color: white;
+/* Round Navigation Buttons */
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  color: black;
   text-decoration: none;
-  font-size: 16px;
-  margin-right: 60px;
-  gap: 5px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  margin-right: 50px;
 }
 
-nav ul li a:hover {
-  color: #0073e6;
-  background-color: darkred;
+.nav-button:hover {
+  background-color: #0073e6;
+  color: white;
 }
 
 /* Home Section */
 .home {
   text-align: center;
-  background-color: #0073e6;
-  color: white;
-  padding: 100px 20px;
-  margin-top: 80px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-top: 150px;
   font-size: 30px;
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 /* About Section */
 .about {
   text-align: center;
-  padding: 50px 20px;
-  background: #f4f4f4;
+  padding: 40px 20px;
 }
 
-.about h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+/* Buttons Section */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 45px;
+  margin-top: 45px;
 }
 
+.btn {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: darkred;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* About Me Section */
 .about-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 100px; /* Increased gap between boxes */
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.about-text {
-  flex: 1;
-  min-width: 300px;
-  text-align: left;
-  font-size: 1.2rem;
-  color: #444;
-}
-
-.about-image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 350px;
+.about-box {
+  width: 45%;
+  padding: 20px;
+  background-color: #0073e6;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 
@@ -313,6 +369,7 @@ footer {
   margin: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background: none; /* Removes any background */
+  margin-top: 45px;
 }
 
 /* Ensure the images fully cover the circle */
