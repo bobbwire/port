@@ -677,4 +677,141 @@ body {
     font-size: 18px;
   }
 }
+/* Style the hamburger menu icon */
+.hamburger-menu {
+  display: none; /* Initially hide on larger screens */
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  margin-left: auto; /* Push it to the right */
+}
+
+nav {
+  display: flex; /* Flexbox for navigation */
+  justify-content: flex-end;
+}
+
+/* Default styles for large screens (laptops/desktops) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+/* Mobile styles (Small Screens) */
+@media (max-width: 600px) {
+  .hamburger-menu {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links on small screens */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for dropdown */
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: block; /* Show links when menu is active */
+  }
+
+  .nav-links li {
+    display: block; /* Stack the links vertically */
+    margin: 15px 0;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+  }
+}
+/* About Section */
+.about {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-box {
+  background-color: #0073e6;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 20px;
+  line-height: 1.6;
+  text-align: justify;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 48%; /* Take up almost half the container */
+}
+
+@media (max-width: 600px) {
+  .about-box {
+    width: 100%; /* Stack the boxes on smaller screens */
+  }
+}
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%; /* Make sure the container takes up full width */
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%; /* Ensure projects take up 30% of the container width */
+  min-width: 280px; /* Prevent items from getting too narrow */
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 100%; /* Stack project cards on mobile */
+  }
+}
+
 
