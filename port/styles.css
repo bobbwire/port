@@ -514,47 +514,67 @@ body {
     height: auto;
     border-radius: 0;
   }
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: black;
-  }
-}
+  /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@media screen and (max-width: 480px) {
-  .hero-background {
-    height: 70vh;
-  }
-  .home {
-    font-size: 20px;
-  }
-  .about-box {
-    width: 90%;
-  }
-  .cta-buttons {
-    flex-direction: column;
-  }
-  .btn {
-    width: 100%;
-  }
-  .carousel {
-    width: 250px;
-    height: 250px;
-  }
-}
+        /* Navbar Styles */
+        nav {
+            background: #333;
+            padding: 10px 20px;
+        }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
 
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-}
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links li {
+                display: block;
+                padding: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
