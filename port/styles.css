@@ -9,7 +9,8 @@ body {
 /*header*/
 /* Hero Background (Unified Background for Header & Home) */
 .hero-background {
-  background: url('https://www.eschoolnews.com/files/2024/12/k-12-tech-innovation-news.jpeg') no-repeat center center/cover;
+  background: url("https://www.eschoolnews.com/files/2024/12/k-12-tech-innovation-news.jpeg")
+    no-repeat center center/cover;
   height: 100vh; /* Full screen height */
   display: flex;
   flex-direction: column;
@@ -24,8 +25,10 @@ body {
 .hero-background::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay */
   z-index: 1;
 }
@@ -38,9 +41,9 @@ body {
   transition: background-image 1s ease-in-out;
 }
 
-
 /* Ensure Header and Home Content are Above Overlay */
-header, .home {
+header,
+.home {
   position: relative;
   z-index: 2;
 }
@@ -95,7 +98,7 @@ header {
 }
 
 .nav-button:hover {
-  background-color: #0073e6;
+  background-color: red;
   color: white;
 }
 
@@ -164,10 +167,8 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 
 /* Skills Section */
 .skills {
@@ -248,8 +249,8 @@ h1 {
 /* Social Media Icons */
 .social-icons {
   display: flex;
-  justify-content: center;  /* Centers the icons */
-  gap: 20px;  /* Increased space between icons */
+  justify-content: center; /* Centers the icons */
+  gap: 80px; /* Increased space between icons */
   margin-top: 20px;
 }
 
@@ -269,10 +270,10 @@ h1 {
 /* Contact Form Styling */
 .contact-form {
   max-width: 500px;
-  margin: 30px auto;  
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;  
+  gap: 15px;
 }
 
 .contact-form input,
@@ -298,7 +299,6 @@ h1 {
 .contact-form button:hover {
   background-color: darkred;
 }
-
 
 /* Footer */
 footer {
@@ -332,7 +332,7 @@ footer {
 .cta-buttons {
   display: flex;
   justify-content: center; /* Centers the buttons horizontally */
-  gap: 20px; /* Adds space between the buttons */
+  gap: 150px; /* Adds space between the buttons */
   margin-top: 0px;
 }
 
@@ -362,8 +362,8 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px; /* <-- Adjust this value to make the circle bigger */
+  height: 300px; /* <-- Adjust this value to make the circle bigger */
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
@@ -387,7 +387,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image fills the circle */
-  border-radius: 200%; /* Keeps the circular shape */
+  border-radius: 50%; /* Keeps the circular shape */
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 1; /* Ensures images are on top */
@@ -395,11 +395,21 @@ footer {
 
 /* Image rotation animation */
 @keyframes fadeInOut {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .carousel-img:nth-child(1) {
@@ -415,6 +425,7 @@ footer {
   animation: fadeInOut 9s infinite;
   animation-delay: 6s;
 }
+
 .download-cv-button {
   display: inline-block;
   padding: 12px 20px;
@@ -440,144 +451,3 @@ footer {
   background-color: crimson; /* Lighter red when clicked */
   transform: scale(0.98);
 }
-/* Responsive Design */
-
-/* Small Screens (Tablets and below) */
-@media (max-width: 1024px) {
-  header {
-    padding: 15px 30px;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-button {
-    width: 60px;
-    height: 60px;
-    font-size: 14px;
-  }
-
-  .home {
-    font-size: 24px;
-    padding-top: 120px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .about-box {
-    width: 80%;
-  }
-
-  .project-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card {
-    width: 80%;
-  }
-
-  .carousel {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-/* Mobile Screens (Phones) */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .nav-button {
-    width: 50px;
-    height: 50px;
-    font-size: 12px;
-    margin-right: 0;
-  }
-
-  .home {
-    font-size: 20px;
-    padding-top: 100px;
-  }
-
-  .about-container {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .about-box {
-    width: 90%;
-    font-size: 14px;
-  }
-
-  .skills ul li {
-    display: block;
-    width: 90%;
-    margin: 5px auto;
-  }
-
-  .project-card {
-    width: 100%;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .carousel {
-    width: 120px;
-    height: 120px;
-  }
-
-  .contact-form {
-    width: 90%;
-  }
-}
-
-/* Extra Small Screens (Very Small Phones) */
-@media (max-width: 480px) {
-  .hero-background {
-    height: 80vh;
-  }
-
-  .home {
-    font-size: 18px;
-    padding-top: 80px;
-  }
-
-  .about-box {
-    font-size: 12px;
-    padding: 15px;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .carousel {
-    width: 100px;
-    height: 100px;
-  }
-
-  .contact p {
-    font-size: 16px;
-  }
-}
-
-
