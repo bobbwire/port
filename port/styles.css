@@ -84,8 +84,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   color: black;
   text-decoration: none;
@@ -332,7 +332,7 @@ footer {
 .cta-buttons {
   display: flex;
   justify-content: center; /* Centers the buttons horizontally */
-  gap: 40px; /* Adds space between the buttons */
+  gap: 20px; /* Adds space between the buttons */
   margin-top: 0px;
 }
 
