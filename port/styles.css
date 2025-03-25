@@ -196,7 +196,7 @@ h1 {
 .projects {
   text-align: center;
   padding: 50px 20px;
-  background-color: #f5f5f5;
+  background-color: #0a0a0a;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -451,130 +451,81 @@ footer {
   background-color: crimson; /* Lighter red when clicked */
   transform: scale(0.98);
 }
+ 
+/*humberger menu*/
 
-/*media*/
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
+/*testimonials*/
+.testimonial-container {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-/* Existing CSS remains unchanged */
+.testimonial-heading {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
 
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 1024px) {
-  .hero-background {
-    height: 80vh;
-  }
-  .home {
-    font-size: 24px;
-    padding-top: 120px;
-  }
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-box {
-    width: 80%;
-  }
-  .project-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-card {
-    width: 90%;
+.testimonial-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background: black;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.testimonial img {
+  width: 150px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 14px;
+  color: #555;
+}
+
+.testimonial h3 {
+  margin-top: 5px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .testimonial-section {
+      grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+@media (max-width: 480px) {
+  .testimonial-section {
+      grid-template-columns: repeat(1, 1fr);
   }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background: white;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .nav-button {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-  /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navbar Styles */
-        nav {
-            background: #333;
-            padding: 10px 20px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            display: block;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background: #333;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .nav-links li {
-                display: block;
-                padding: 10px;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-        }
+}
+.testimonial {
+  background: white; /* Change this to any color you like */
+}
+.stars{
+  color: orange;
+}
