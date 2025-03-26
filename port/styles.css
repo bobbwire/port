@@ -224,36 +224,41 @@ h1 {
 /* Contact Section */
 /* Contact Section */
 .contact {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
   background-color: #0073e6;
   color: white;
-  padding: 50px 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
 }
 
-.contact p {
-  font-size: 18px;
-  margin: 10px 0;
+/* Left Side: Contact Info + Social Media Icons */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  gap: 20px; /* Space between elements */
 }
 
-.contact a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* Email & Phone - Arranged Vertically */
+.contact-info {
+  font-size: 16px;
 }
 
-.contact a:hover {
-  text-decoration: underline;
+.contact-info p {
+  margin: 5px 0;
 }
 
-/* Social Media Icons */
+/* Social Media Icons - Below Contact Info */
 .social-icons {
   display: flex;
-  justify-content: center; /* Centers the icons */
-  gap: 30px; /* Increased space between icons */
-  margin-top: 20px;
+  flex-direction: column; /* Arranged vertically */
+  gap: 15px;
 }
 
+/* Social Icons Styling */
 .social-icons a {
   display: inline-block;
 }
@@ -264,27 +269,32 @@ h1 {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Social Icons Hover Effect */
 .social-icons img:hover {
-  transform: scale(1.1);
-}
-/* Contact Form Styling */
-.contact-form {
-  max-width: 500px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  transform: scale(1.2);
 }
 
+/* Contact Form - Positioned on the Right */
+.contact-form {
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+/* Form Inputs */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
 }
 
+/* Submit Button */
 .contact-form button {
   background-color: red;
   color: white;
@@ -293,12 +303,38 @@ h1 {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
+/* Button Hover Effect */
 .contact-form button:hover {
   background-color: darkred;
+  transform: scale(1.05);
 }
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-left {
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
 
 /* Footer */
 footer {
@@ -480,6 +516,7 @@ footer {
   width: 300px;
   height: 300px;
   background: black;
+  background-image: url("");
   padding: 20px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -502,7 +539,7 @@ footer {
 
 .testimonial p {
   font-size: 14px;
-  color: #555;
+  color: white;
 }
 
 .testimonial h3 {
@@ -524,8 +561,9 @@ footer {
   }
 }
 .testimonial {
-  background: white; /* Change this to any color you like */
+  background: rgb(6, 6, 6); /* Change this to any color you like */
 }
 .stars{
   color: orange;
+  font-size: 2rem;
 }
