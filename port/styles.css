@@ -77,6 +77,7 @@ header {
 
 .nav-links li {
   display: inline-block;
+  font-size: 13PX;
 }
 
 /* Round Navigation Buttons */
@@ -84,8 +85,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   color: black;
   text-decoration: none;
@@ -94,13 +95,84 @@ header {
   border-radius: 50%;
   border: 2px solid transparent;
   transition: 0.3s ease;
-  margin-right: 50px;
+  margin-right: 90px;
 }
 
 .nav-button:hover {
   background-color: red;
   color: white;
 }
+
+/*media for screen*/
+/* Ensure Elements Adjust to Screen Size */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-button {
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    margin-right: 0;
+  }
+
+  .hero-background {
+    height: 80vh; /* Reduce height on smaller screens */
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-background {
+    height: 70vh;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .nav-button {
+    width: 35px;
+    height: 35px;
+    font-size: 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+
 
 /* Home Section */
 .home {
@@ -111,10 +183,175 @@ header {
 }
 
 /* About Section */
-.about {
-  text-align: center;
-  padding: 40px 20px;
+/* About Section */
+/* About Section (Smaller Size) */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Reduced padding */
+  background-color: #f5f5f5;
+  height: 70vh; /* Reduced height */
 }
+
+/* Circular Image with Red Ring */
+.about-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.about-image {
+  width: 350px; /* Reduced size */
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid red; /* Red ring */
+}
+
+/* Thicker Vertical Line */
+.vertical-line {
+  width: 40px; /* Increased thickness */
+  min-height: 70%; /* Reduced height */
+  background-color: red; /* Keep it red */
+  margin: 0 20px; /* Adjust spacing */
+  display: block;
+}
+
+/* About Content (Smaller Width) */
+.about-content {
+  max-width: 500px; /* Reduce width */
+  margin-left: auto; /* Keep it right-aligned */
+}
+
+/* About Me Title */
+.about-title {
+  font-size: 28px; /* Slightly smaller */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* H3 Subtitle (Blue & Red Gradient) */
+.about-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(to right, blue, red);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs (Smaller font size) */
+.about-content p {
+  font-size: 16px; /* Reduced font size */
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 15px; /* Less spacing */
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*about me media element*/
+/* Responsive Design for About Section */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 280px;
+    height: 360px;
+  }
+
+  .vertical-line {
+    width: 10px;
+    min-height: 50px;
+    margin: 10px 0;
+  }
+
+  .about-content {
+    max-width: 600px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 26px;
+    align-items: center;
+  }
+
+  .about-subtitle {
+    font-size: 20px;
+  }
+
+  .about-content p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 30px 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 250px;
+    height: 330px;
+  }
+
+  .vertical-line {
+    display: none; /* Hide for smaller screens */
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+  }
+
+  .about-content {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 280px;
+  }
+
+  .about-title {
+    font-size: 22px;
+  }
+
+  .about-subtitle {
+    font-size: 16px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+}
+
+
+
+
 
 /* Buttons Section */
 .cta-buttons {
@@ -126,7 +363,7 @@ header {
 }
 
 .btn {
-  background-color: red;
+  background-color: rgb(97, 30, 30);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -139,7 +376,7 @@ header {
 }
 
 .btn:hover {
-  background-color: darkred;
+  background-color: rgb(63, 27, 27);
 }
 
 h1 {
@@ -191,6 +428,10 @@ h1 {
   padding: 10px 15px;
   border-radius: 5px;
 }
+.proj{
+  color: white;
+  font-size: 40px;
+}
 
 /* Projects Section */
 .projects {
@@ -222,117 +463,7 @@ h1 {
 }
 
 /* Contact Section */
-/* Contact Section */
-.contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #0073e6;
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  position: relative;
-}
 
-/* Left Side: Contact Info + Social Media Icons */
-.contact-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
-  gap: 20px; /* Space between elements */
-}
-
-/* Email & Phone - Arranged Vertically */
-.contact-info {
-  font-size: 16px;
-}
-
-.contact-info p {
-  margin: 5px 0;
-}
-
-/* Social Media Icons - Below Contact Info */
-.social-icons {
-  display: flex;
-  flex-direction: column; /* Arranged vertically */
-  gap: 15px;
-}
-
-/* Social Icons Styling */
-.social-icons a {
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Social Icons Hover Effect */
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
-/* Contact Form - Positioned on the Right */
-.contact-form {
-  width: 400px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  color: black;
-}
-
-/* Form Inputs */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-/* Submit Button */
-.contact-form button {
-  background-color: red;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-/* Button Hover Effect */
-.contact-form button:hover {
-  background-color: darkred;
-  transform: scale(1.05);
-}
-
-/* Responsive for Mobile */
-@media screen and (max-width: 768px) {
-  .contact {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-left {
-    align-items: center;
-  }
-
-  .contact-form {
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  .social-icons {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
 
 
 
@@ -493,7 +624,7 @@ footer {
 /*testimonials*/
 .testimonial-container {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 10px;
 }
 
 .testimonial-heading {
@@ -513,17 +644,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 180px;
+  height: 180px;
   background: black;
   background-image: url("");
   padding: 20px;
-  border-radius: 50%;
+  border-radius: 70%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
-  gap: 20px;
+  gap: 0px;
 }
 
 .testimonial:hover {
@@ -531,20 +662,22 @@ footer {
 }
 
 .testimonial img {
-  width: 150px;
-  height: 130px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .testimonial p {
-  font-size: 14px;
+  font-size: 11px;
   color: white;
+  text-align: center;
+  text-align: justify;
 }
 
 .testimonial h3 {
   margin-top: 5px;
-  color: #333;
+  color: white;
   font-size: 16px;
 }
 
@@ -565,5 +698,294 @@ footer {
 }
 .stars{
   color: orange;
-  font-size: 2rem;
+  font-size: 0.50rem;
 }
+
+/* Additional Skills Section */
+/* Skills Section */
+.skills-section {
+  background-color: rgb(252, 252, 252);
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #0a0a0a;
+}
+
+/* Skills Container */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px; /* Increased gap */
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Skill Box */
+.skill-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: white;
+}
+
+/* Circular Image */
+.skill-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+/* Skill Content */
+.skill-content {
+  flex: 1;
+}
+
+/* Skill Bar */
+.skill-bar {
+  background-color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  width: 100%;
+  height: 10px;
+}
+
+/* Progress */
+.progress {
+  background-color: blue;
+  height: 100%;
+  text-align: right;
+  padding-right: 5px;
+  line-height: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+}
+/*hr*/
+hr{
+  color: rgb(255, 2, 2);
+  background-color: #0073e6;
+}.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px;
+  background-color: #0073e6;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  gap: 50px; /* Added spacing between left and right sections */
+}
+
+/* Left Side: Contact Info + Social Media Icons */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px; /* Increased spacing for better readability */
+  flex: 1;
+}
+
+/* Email & Phone - Arranged Vertically */
+.contact-info {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* More space between email and phone */
+}
+
+.contact-info p {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+}
+
+/* Social Media Icons - Below Contact Info */
+/* Social Media Icons - Now Arranged Horizontally */
+.social-icons {
+  display: flex;
+  flex-direction: row; /* Arranged in a horizontal line */
+  gap: 15px; /* Space between icons */
+  margin-top: 15px; /* Adds space above */
+}
+
+/* Social Icons Styling */
+.social-icons a {
+  display: inline-block;
+  padding: 5px; /* Adds spacing around icons */
+}
+
+/* Social Media Icon Images */
+.social-icons img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease-in-out;
+  padding: 5px; /* Adds spacing inside */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Social Icons Hover Effect */
+.social-icons img:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/*contact form*/
+/* Contact Form - Positioned on the Right */
+/* Contact Form - Styled for a Professional Look */
+/* Contact Form Container */
+.contact-form {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.1); /* Transparent White Background */
+  backdrop-filter: blur(10px); /* Frosted Glass Effect */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+/* Contact Form Title */
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Form Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+/* Placeholder Text */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+}
+
+/* Textarea */
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.contact-form button {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+/* Button Hover Effect */
+.contact-form button:hover {
+  background-color: #d60000;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 16px rgba(255, 0, 0, 0.3);
+}
+
+
+/*my services*/
+/* General Section Styling */
+.services {
+  text-align: center;
+  background: #121212; /* Dark Background */
+  color: white;
+  padding: 50px 0;
+}
+
+.services h2 {
+  color: white; /* Gold Color for Title */
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+/* Service Container */
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Service Box */
+.service-box {
+  background: #0073e6;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 6px 12px rgba(00, 00, 255, 0.2); /* Soft glow */
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgb(255, 0, 0, 0.4);
+}
+
+/* Service Image */
+.service-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid red;
+}
+
+/* Service Text */
+.service-box p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.service-box h3 {
+  color: blue;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
