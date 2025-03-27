@@ -53,7 +53,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   padding: 20px 50px;
   position: fixed;
   top: 0;
@@ -499,7 +499,7 @@ footer {
 .cta-buttons {
   display: flex;
   justify-content: center; /* Centers the buttons horizontally */
-  gap: 40px; /* Adds space between the buttons */
+  gap: 30px; /* Adds space between the buttons */
   margin-top: 0px;
 }
 
@@ -529,8 +529,8 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 300px; /* <-- Adjust this value to make the circle bigger */
-  height: 300px; /* <-- Adjust this value to make the circle bigger */
+  width: 250px; /* <-- Adjust this value to make the circle bigger */
+  height: 250px; /* <-- Adjust this value to make the circle bigger */
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
