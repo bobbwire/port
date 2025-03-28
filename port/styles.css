@@ -210,7 +210,7 @@ header {
 
 /* Thicker Vertical Line */
 .vertical-line {
-  width: 30px; /* Increased thickness */
+  width: 15px; /* Increased thickness */
   min-height: 70%; /* Reduced height */
   background-color: red; /* Keep it red */
   margin: 0 20px; /* Adjust spacing */
@@ -443,92 +443,246 @@ h1 {
 }
 
 /* Skills Section */
-.skills {
+/* Skills Section */
+.skills-section {
+  background-color: rgb(252, 252, 252);
   text-align: center;
-  padding: 50px 20px;
-  background-color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 30px 0;
+  overflow: hidden;
 }
 
-.skills ul {
-  list-style: none;
-  padding: 0;
+/* Section Title */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #0a0a0a;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s ease-out forwards;
 }
 
-.skills ul li {
-  display: inline-block;
-  margin: 10px;
-  background: #0073e6;
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  max-width: 85%;
+  overflow-x: auto;
+  padding: 5px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  justify-content: center;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide Scrollbar for Webkit Browsers */
+.skills-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Skill Box */
+.skill-box {
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  text-align: left;
   color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-/*project section*/
-.proj {
-  color: white;
-  font-size: 32px; /* Slightly smaller for better fit */
-  text-align: center;
+  min-width: 180px; /* Smaller width */
+  max-width: 220px;
+  flex-shrink: 0;
+  height: 90px; /* Reduced height */
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 1s ease-out forwards;
 }
 
-/* Projects Section */
+/* Hover Effect - Skill Box Pops Up */
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Circular Image */
+.skill-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Animation - Rotate on Hover */
+.skill-box:hover .skill-image {
+  transform: rotate(360deg);
+}
+
+/* Skill Content */
+.skill-content {
+  flex: 1;
+  font-size: 12px;
+}
+
+/* Skill Bar */
+.skill-bar {
+  background-color: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+  width: 100%;
+  height: 5px; /* Smaller on desktop */
+}
+
+/* Skill Progress */
+.skill-progress {
+  background-color: #f1c40f;
+  height: 100%;
+  border-radius: 8px;
+  transition: width 1s ease-in-out;
+}
+
+/* 📱 Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .skill-box {
+    min-width: 95%; /* Take most of the screen width */
+    max-width: 95%;
+    padding: 10px;
+    height: 80px;
+  }
+
+  .skill-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .skill-content {
+    font-size: 11px;
+  }
+
+  /* 🔽 Reduce Progress Bar on Mobile */
+  .skill-bar {
+    height: 3px; /* Make bar thinner */
+  }
+}
+
+
+
+
+//* Project Section Title */
+/* Project Section */
+/* Project Section */
+/* Project Section */
 .projects {
   text-align: center;
-  padding: 40px 15px; /* Reduced padding for smaller screens */
-  background-color: #0a0a0a;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px 10px;
+  background-color:rgb(23, 65, 234); /* Background remains black */
+}
+
+.proj {
+  font-size: 32px;
+  color: black;
+  margin-bottom: 20px;
+  background-color: white;
 }
 
 /* Project Container */
 .project-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Smaller gap for better fit */
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: px;
+  justify-items: center;
 }
 
-/* Project Card */
+/* Project Card - White Circular Containers */
 .project-card {
-  background: white;
-  padding: 15px; /* Reduced padding */
-  border-radius: 8px; /* Slightly smaller */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 200px; /* Make cards smaller */
-  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background: #ffffff; /* White container for contrast */
+  padding: 20px;
+  border-radius: 50%; /* Perfect Circle */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  gap: 0px;
 }
 
-/* Project Image */
+/* Hover Effect */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Project Image - Circular */
 .project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .proj {
-    font-size: 28px;
-  }
-
-  .project-card {
-    max-width: 180px; /* Even smaller for tablets */
-    padding: 12px;
-  }
+/* Image Animation */
+.project-card:hover img {
+  transform: rotate(360deg);
 }
 
-@media screen and (max-width: 480px) {
-  .proj {
-    font-size: 24px;
-  }
+/* Project Title */
+.project-card h3 {
+  margin-top: 5px;
+  color: black; /* Dark text for visibility */
+  font-size: 16px;
+}
 
+/* Project Description */
+.project-card p {
+  font-size: 11px;
+  color: #555; /* Slightly darker text for contrast */
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
   .project-container {
-    gap: 5px;
-  }
-
-  .project-card {
-    max-width: 160px; /* Smaller for mobile */
-    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 480px) {
+  .project-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+/* Additional Styling */
+.stars {
+  color: orange;
+  font-size: 0.50rem;
+}
+
 
 
 /* Contact Section */
@@ -713,13 +867,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   background: black;
   background-image: url("");
   padding: 20px;
-  border-radius: 70%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 80%;
+  box-shadow: 0 4px 8px #0073e6;
   text-align: center;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
@@ -772,6 +926,7 @@ footer {
 
 /* Additional Skills Section */
 /* Skills Section */
+/* Skills Section */
 .skills-section {
   background-color: rgb(252, 252, 252);
   text-align: center;
@@ -780,46 +935,67 @@ footer {
 
 /* Section Title */
 .section-title {
-  font-size: 24px; /* Reduced font size */
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #0a0a0a;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s ease-out forwards;
 }
 
-/* Skills Container */
+/* Skills Container - Set to Horizontal Row */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Grid */
-  gap: 20px; /* Reduced gap */
-  max-width: 800px;
-  margin: auto;
-  padding: 0 15px; /* Added padding for smaller screens */
+  display: flex;
+  gap: 20px; /* Space between items */
+  max-width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+  padding: 0 15px;
+  justify-content: center;
 }
 
 /* Skill Box */
 .skill-box {
   background-color: #222;
-  padding: 15px; /* Reduced padding */
+  padding: 15px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   text-align: left;
   color: white;
+  min-width: 250px; /* Ensures each skill box fits in a row */
+  flex-shrink: 0; /* Prevents shrinking in a single row */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Hover Effect - Skill Box Pops Up */
+.skill-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Circular Image */
 .skill-image {
-  width: 35px; /* Reduced size */
-  height: 35px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin-right: 15px;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Animation - Rotate on Hover */
+.skill-box:hover .skill-image {
+  transform: rotate(360deg);
 }
 
 /* Skill Content */
 .skill-content {
   flex: 1;
-  font-size: 14px; /* Smaller text */
+  font-size: 14px;
 }
 
 /* Skill Bar */
@@ -829,13 +1005,37 @@ footer {
   overflow: hidden;
   margin-top: 8px;
   width: 100%;
-  height: 8px; /* Reduced height */
+  height: 8px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .skills-container {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    flex-wrap: nowrap; /* Ensures a single line remains */
   }
 
   .skill-box {
@@ -843,8 +1043,8 @@ footer {
   }
 
   .skill-image {
-    width: 30px; /* Even smaller images */
-    height: 30px;
+    width: 80px;
+    height: 80px;
   }
 
   .section-title {
@@ -855,6 +1055,7 @@ footer {
     font-size: 12px;
   }
 }
+
 
 /* Progress */
 .progress {
@@ -1063,8 +1264,8 @@ hr{
 
 /* Service Image */
 .service-box img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
   border: 3px solid red;
