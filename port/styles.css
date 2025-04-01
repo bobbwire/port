@@ -592,9 +592,10 @@ h1 {
 .projects {
   text-align: center;
   padding: 20px 10px;
-  background-color:rgb(23, 65, 234); /* Background remains black */
+  background-color: rgb(23, 65, 234);
 }
 
+/* Project Title */
 .proj {
   font-size: 32px;
   color: black;
@@ -606,38 +607,37 @@ h1 {
 .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: px;
+  gap: 20px; /* Added gap between items */
   justify-items: center;
 }
 
-/* Project Card - White Circular Containers */
+/* Project Card - Square or Rectangular */
 .project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 240px;
-  height: 240px;
-  background: #ffffff; /* White container for contrast */
+  width: 250px; /* Adjusted width */
+  height: 280px; /* Adjusted height */
+  background: #ffffff;
   padding: 20px;
-  border-radius: 50%; /* Perfect Circle */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  border-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 8px red;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
-  gap: 0px;
 }
 
 /* Hover Effect */
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Image - Circular */
+/* Project Image */
 .project-card img {
-  width: 100px;
+  width: 200px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 10px; /* Slightly rounded edges */
   margin-bottom: 10px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
@@ -651,21 +651,26 @@ h1 {
 /* Project Title */
 .project-card h3 {
   margin-top: 5px;
-  color: black; /* Dark text for visibility */
+  color: black;
   font-size: 16px;
 }
 
 /* Project Description */
 .project-card p {
-  font-size: 11px;
-  color: #555; /* Slightly darker text for contrast */
+  font-size: 12px;
+  color: #555;
   text-align: center;
 }
 
-/* Responsive layout */
+/* Responsive Layout */
 @media (max-width: 768px) {
   .project-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    width: 200px;
+    height: 250px;
   }
 }
 
@@ -673,7 +678,13 @@ h1 {
   .project-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
 }
+
 
 
 
@@ -841,6 +852,24 @@ footer {
   background-color: crimson; /* Lighter red when clicked */
   transform: scale(0.98);
 }
+
+.work-with-me {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.work-with-me:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
  
 /*humberger menu*/
 
