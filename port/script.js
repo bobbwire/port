@@ -57,6 +57,10 @@ function toggleMenu() {
   navLinks.classList.toggle("show");
 }
 
+   function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+
 
 
 
