@@ -390,6 +390,7 @@ h1 {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .cta-buttons {
     flex-direction: column; /* Stack buttons vertically */
@@ -398,9 +399,9 @@ h1 {
   }
 
   .btn {
-    width: 80%; /* Make buttons wider for mobile */
-    font-size: 13px;
-    padding: 7px 12px;
+    width: 60%; /* Reduced width */
+    font-size: 12px; /* Slightly smaller font */
+    padding: 6px 10px; /* Reduced padding */
   }
 
   h1 {
@@ -410,15 +411,16 @@ h1 {
 
 @media screen and (max-width: 480px) {
   .btn {
-    width: 90%;
-    font-size: 12px;
-    padding: 6px 10px;
+    width: 30%; /* Further reduced for small screens */
+    font-size: 11px;
+    padding: 5px 20px;
   }
 
   h1 {
     font-size: 20px;
   }
 }
+
 
 
 /* About Me Section */
@@ -616,8 +618,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px; /* Adjusted width */
-  height: 280px; /* Adjusted height */
+  width: 300px; /* Adjusted width */
+  height: 300px; /* Adjusted height */
   background: #ffffff;
   padding: 20px;
   border-radius: 10px; /* Slightly rounded corners */
@@ -704,7 +706,7 @@ h1 {
 /* Footer */
 footer {
   text-align: center;
-  background: #333;
+  background: black;
   color: white;
   padding: 15px;
   margin-top: 20px;
@@ -730,14 +732,23 @@ footer {
 }
 /* CTA Buttons */
 /* Center the CTA Buttons */
-.cta-buttons {
-  display: flex;
-  justify-content: center; /* Centers the buttons horizontally */
-  gap: 40px; /* Adds space between the buttons */
-  margin-top: 0px;
+@keyframes bouncePop {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-/* Common Button Styling */
 .cta-buttons .btn {
   display: inline-block;
   background-color: red;
@@ -748,13 +759,10 @@ footer {
   font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease;
+  animation: bouncePop 1.8s infinite; /* 👈 Bouncy Pop Animation */
 }
 
-/* Hover Effect */
-.cta-buttons .btn:hover {
-  background-color: darkred;
-}
 /* Carousel Section */
 /* Carousel Section */
 /* Carousel Section */
@@ -1311,5 +1319,268 @@ hr{
   color: blue;
   font-size: 18px;
   margin-top: 10px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 20px;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Responsive Menu */
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #222;
+      padding: 10px 0;
+  }
+  
+  .menu a {
+      padding: 10px;
+      text-align: center;
+      display: block;
+  }
+  
+  .hamburger {
+      display: flex;
+  }
+  
+  .menu.active {
+      display: flex;
+  }
+}
+.bobp1{
+  margin-left: 70px;
+  margin-right: 70px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.bobp2{
+  margin: 70px;
+}
+.bobp3{
+  margin: 70px;
+}
+/*work with me*/
+/* Banana Zone Styling */
+.banana-zone {
+  background-color: #b5afaf;
+  padding: 40px 10%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Choco Heading */
+.choco-heading {
+  font-size: 2.5em;
+  text-align: center;
+  background: linear-gradient(to right, rgb(130, 7, 7), rgb(22, 5, 154)); /* Red to Blue Gradient */
+  -webkit-background-clip: text; /* Clip the background to text */
+  background-clip: text; /* For non-webkit browsers */
+  color: transparent; /* Make the text itself transparent */
+  margin-bottom: 20px;
+}
+
+
+/* Flexbox Container */
+.flexy-pineapple {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Mango Photo Box */
+.mango-photo-box {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mango-photo-box img {
+  width: 300px; /* Set a fixed larger width */
+  height: 300px; /* Ensure height matches width for a perfect circle */
+  object-fit: cover; /* Keep image aspect ratio inside the circle */
+  border-radius: 50%; /* Make it round */
+  box-shadow: 0px 8px 16px rgba(191, 13, 13, 0.3); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* Optional hover effect */
+.mango-photo-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Coconut Bio Box */
+.coconut-bio-box {
+  flex: 2;
+  min-width: 350px;
+  max-width: 600px;
+}
+
+.tiny-tagline {
+  font-size: 1.1em;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.main-peep {
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: center;
+  color: #3e2723;
+  margin-bottom: 20px;
+}
+
+.squishy-para {
+  font-size: 1em;
+  line-height: 1.6;
+  color: black;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* Peach Facts Box */
+.peach-facts-box {
+  flex: 1;
+  margin-left: 70px;
+  min-width: 250px;
+  background-color: rgb(211, 92, 92); /* Initial color (Red) */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: popIn 1.2s ease-out infinite, colorChange 2.4s ease-in-out infinite;
+}
+
+/* Popping Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color Change Animation */
+@keyframes colorChange {
+  0% {
+    background-color: rgb(211, 92, 92); /* Red */
+  }
+  50% {
+    background-color: rgb(13, 115, 224); /* Blue */
+  }
+  100% {
+    background-color: rgb(211, 92, 92); /* Red */
+  }
+}
+
+
+
+
+.peach-facts-box h3 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #5d4037;
+}
+
+.peach-facts-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.peach-facts-box li {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.peach-facts-box li strong {
+  color: #3e2723;
+}
+
+/* Grape Social Icons */
+.grape-socialz {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.grape-socialz a {
+  color: #555;
+  font-size: 1.4em;
+  transition: color 0.3s;
+}
+
+.grape-socialz a:hover {
+  color: #3e2723;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .flexy-pineapple {
+    flex-direction: column;
+  }
+
+  .mango-photo-box {
+    margin-bottom: 20px;
+  }
+
+  .coconut-bio-box {
+    text-align: center;
+  }
+
+  .peach-facts-box {
+    margin-top: 20px;
+  }
 }
 
